@@ -1,0 +1,28 @@
+[package]
+name = "actix-web4_test"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-web = "4"
+#actix-web = "4.0.1"
+tokio-postgres = {version="0.7",features = ["with-uuid-0_8","with-time-0_3","with-chrono-0_4","with-time-0_2"]}
+serde = { version = "1.0", features = ["derive"] }
+deadpool-postgres = {version="0.10.1",features = ["serde"]}
+#thiserror = "1.0"
+rust_decimal = {version="1.21.0", features = [ "tokio-pg","serde-str" ] }
+rust_decimal_macros = "1.21"
+chrono = {version="0.4",features = ["serde"]}
+chrono-tz = {version="0.6",features=["serde"]}
+
+dotenv = "0.15.0"
+env_logger = "0.9"
+time = "0.3"
+hmac-sha512 = "1.1"
+jsonwebtoken = "8"
+hex = "0.4"
+actix-service = "2"
+futures-util = "0.3"
+futures-core = "0.3.21"
