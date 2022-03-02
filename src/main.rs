@@ -23,7 +23,11 @@ async fn main() -> std::io::Result<()> {
     env_logger::init_from_env(Env::default().default_filter_or("debug"));
 
     // 加载配置
-    dotenv().ok();
+    if dotenv().ok().is_none(){
+        println!("--->配置文件加载失败，请检查~<---");
+        // panic!("-->配置文件加载失败，请检查~",)
+        return Ok(());
+    }
     let context_path = std::env::var("CONTEXT_PATH").expect("配置不存在::CONTEXT_PATH");
     let server_port = std::env::var("SERVER_PORT").expect("配置不存在::SERVER_PORT");
 
