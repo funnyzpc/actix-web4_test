@@ -11,3 +11,6 @@
 + 7.日志
 + 8.jwt框架
 +
+
+## 中间件添加数据访问参考
+https://stackoverflow.com/questions/64032247/how-can-i-get-webdatapoolmysql-in-actix-web-2-0-middleware
