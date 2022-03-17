@@ -6,7 +6,7 @@ use actix_web::body::EitherBody;
 use futures_util::future::{ok, FutureExt,LocalBoxFuture, Ready, ready};
 
 use crate::ResultBuild;
-use crate::util::token_util::TokenUtil;
+// use crate::util::token_util::TokenUtil;
 
 #[derive(Clone)]
 pub struct Authentication;
